@@ -1,0 +1,180 @@
+Drive Link:
+
+box-model:https://vimeo.com/1036632536/c41e3bf57e
+
+position: https://vimeo.com/1036638610/d4172028f5
+
+css unit: https://vimeo.com/1036643561/6f174d91f0
+
+1question
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Box</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="responsive-box"></div>
+</body>
+</html>
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .responsive-box {
+    width: 50vw;  
+    padding: 10px;
+    border: 5px solid red;
+    background-color: #f0f0f0; 
+  }
+
+
+2nd question
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixed Header with Dropdown</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Welcome</h1>
+    <button id="menuButton" class="menu-button">Toggle Menu</button>
+    <div id="dropdownMenu" class="dropdown-menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </ul>
+    </div>
+  </header>
+
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestiae culpa nesciunt doloremque, provident consequuntur, quidem repellendus ipsum reiciendis doloribus dolorum, quod quis quos nostrum! Animi, eligendi mollitia. Error, consequuntur.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+ 
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .menu-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .menu-button:hover {
+    background-color: #555;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px; 
+    right: 0;
+    background-color: #444;
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   
+  }
+  
+  .dropdown-menu ul {
+    list-style: none;
+  
+  }
+  
+  .dropdown-menu li {
+    padding: 8px;
+    color: white;
+  }
+
+  .dropdown-menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: #555;
+  }
+  
+
+  .content {
+    margin-top: 60px; 
+    padding: 20px;
+    height: 2000px;
+  }
+
+
+3rd question
+const menuButton = document.getElementById('menuButton');
+const dropdownMenu = document.getElementById('dropdownMenu');
+
+
+menuButton.addEventListener('click', () => {
+  const isMenuVisible = dropdownMenu.style.display === 'block';
+  dropdownMenu.style.display = isMenuVisible ? 'none' : 'block';
+});
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+  }
+  
+  p {
+    font-size: clamp(1rem, 3vw, 2rem); 
+  }
