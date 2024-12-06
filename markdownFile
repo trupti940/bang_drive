@@ -178,3 +178,338 @@ body {
   p {
     font-size: clamp(1rem, 3vw, 2rem); 
   }
+
+
+  ***Portfolio***
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div id="logo">Trupti</div>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://resume-builder-test-new.masaischool.com/resume/public?resumeId=6709217d7ca4c4119e56e3a1" target="_blank">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="content">
+            <h1>I'm Trupti Pimpale</h1>
+            <p>Full Stack Web Developer</p>
+            <a href="https://www.linkedin.com/in/trupti-pimpale-569aa924a/" target="_blank">LINKEDIN</a>
+            <a href="https://github.com/trupti940" target="_blank">MY WORKS</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="content">
+            <h2>About Me</h2>
+            <p>Driven full stack web developer with expertise in the MERN stack and a B.Tech in Electrical Engineering. Experienced in building collaborative web applications with a focus on delivering innovative, high-performance solutions. Proficient in both front-end and back-end development, with excellent problem-solving and teamwork skills.</p>
+            <p><strong>Profile:</strong> Full Stack Developer</p>
+            <p><strong>Education:</strong> Bachelor of Technology</p>
+            <p><strong>Language:</strong> English, Hindi, Marathi</p>
+            <p><strong>Interest:</strong> Cooking</p>
+            
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="content">
+            <h2>Skills</h2>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+            <p>React</p>
+
+        </div>
+    </section>
+
+    <section id="projects" class="gallery">
+        <div class="content">
+            <h2>Projects</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                  <h1>Behance Website Clone with React</h1>
+                  <p>The Behance clone project is a platform where users create profiles, post jobs, explore others' projects, and hire talent.</p>
+                </div>
+                <div class="grid-item">
+                  <h1>Task Mentor with JavaScript</h1>
+                  <p>Task Mentor is a productivity and time management tool designed to help users manage tasks, prioritize effectively, and achieve goals.</p>
+                </div>
+                <div class="grid-item">
+                  <h1>Finance Tracker</h1>
+                  <p>Finance Tracker project aims to help you keep track of your finances in an engaging and visually appealing way</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="content">
+            <h2>Contact</h2>
+            <div class="contact_links">
+              <div class="address">
+                <h1>ADDRESS</h1>
+                <p>Latur, Maharashtra, India</p>
+              </div>
+              <div class="contactNumber">
+                <h1>Contact Number</h1>
+                <p>+91 9767368261</p>
+              </div>
+              <div class="emailAddress">
+                <h1>Email Address</h1>
+                <p>truptipimpale1999@gmail.com</p>
+              </div>
+              
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Trupti's Portfolio </p>
+        <a href="#home">Back to Top</a>
+    </footer>
+</body>
+</html>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar #logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #f5a623;
+}
+
+.navbar a.active {
+    color: #f5a623;
+}
+
+.navbar a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #f5a623;
+}
+
+section {
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1e1e2f;
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+
+#home {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#home a {
+    display: inline-block;
+    margin: 0 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #f5a623;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+#home a:hover {
+    background-color: #cf8419;
+}
+
+.gallery .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.grid-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-item h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1e1e2f;
+}
+
+.grid-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact_links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contact_links div {
+    text-align: left;
+    max-width: 300px;
+}
+
+.contact_links h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1e1e2f;
+}
+
+.contact_links p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #00d4ff;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #009ecf;
+    transform: scale(1.05);
+}
+
+.btn::before {
+    content: '\2605 '; 
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.btn::after {
+    content: ' \1F680'; 
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+footer a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
